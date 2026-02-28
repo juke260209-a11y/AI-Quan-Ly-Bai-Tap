@@ -2,22 +2,28 @@ import streamlit as st
 
 st.set_page_config(page_title="AI Quản Lý Bài Tập")
 
-# CSS màu sắc
 st.markdown("""
-    <style>
-    .stApp {
-        background: linear-gradient(135deg, #667eea, #764ba2);
-        color: white;
-    }
-    .stTextInput > div > div > input {
-        background-color: #ffffff;
-        color: black;
-    }
-    .stNumberInput input {
-        background-color: #ffffff;
-        color: black;
-    }
-    </style>
+<style>
+.stApp {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+}
+
+.stTextInput > div > div > input,
+.stNumberInput > div > div > input {
+    background-color: white;
+    color: black;
+}
+
+.stButton > button {
+    background-color: #ff4b4b;
+    color: white;
+    border-radius: 10px;
+    height: 45px;
+    width: 200px;
+    font-size: 16px;
+}
+</style>
 """, unsafe_allow_html=True)
 
 st.title("AI Quản Lý Bài Tập Thông Minh")
@@ -36,4 +42,5 @@ if st.button("Tính ưu tiên"):
     if diem >= 10:
         st.error("NÊN LÀM NGAY KHÉO MUỘNNN =))))!")
     else:
+
         st.info("Có thể làm sau")
